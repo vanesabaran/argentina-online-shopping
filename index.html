@@ -9,65 +9,51 @@
     <link rel="stylesheet" href="./css/style.css" />
     <!--Favicon-->
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <!--CSS Bootsratp-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
   <body>
+    
     <!--Barra de navegación-->
-    <header class="cabecera">
+    <header>
       <!--Principal-->
-      <nav>
-        <ul class="ante-menu">
-          <!--Buscador-->
-          <li class="buscador-display">
-            <input
-              type="text"
-              class="input-buscador"
-              placeholder="Buscar producto..."
+      <div class="menu">
+        <div class="box box1">
+          <!--Buscador--> 
+          <input type="text" class="input-buscador" placeholder="Buscar producto..." />
+          <button href="#" class="btn-buscador">Buscar</button>
+        </div>
+        <!--Logo-->
+        <div class="box box2">
+          <a href="#">
+            <img src="./images/logo.png" class="logo" alt="Logo de Argentina Online Shopping" />
+          </a>
+        </div>
+        <!--Cuenta y carrito-->
+        <div class="box box3">
+          <a href="#">
+            <img
+              src="./images/iconos/usuario.png"
+              class="icons-menu"
+              alt="Crear o iniciar la cuenta"
             />
-            <a href="" class="buscador">
-              <!-- <img src="./images/iconos/lupa.png" class="buscador" alt="" /> -->
-              Buscar
-            </a>
-          </li>
-          <!--Logo-->
-          <li>
-            <a href="#">
-              <img
-                src="./images/logo.png"
-                class="logo"
-                alt="Logo de Argentina Online Shopping"
-              />
-            </a>
-          </li>
-          <!--Cuenta y carrito-->
-          <li class="ante-menu cuenta-carrito">
-            <a href="#">
-              <img
-                src="./images/iconos/usuario.png"
-                id="iconos"
-                class="usuario"
-                alt="Crear o iniciar la cuenta"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="./images/iconos/carrito.png"
-                id="iconos"
-                class="carrito"
-                alt="Carrito"
-              />
-            </a>
-          </li>
-        </ul>
-      </nav>
+          </a>
+          <a href="#">
+            <img
+              src="./images/iconos/carrito.png"
+              class="icons-menu"
+              alt="Carrito"
+            />
+          </a>
+        </div>
+      </div>
       <!--Menú principal-->
       <nav>
-        <ul class="menu">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="./pages/comercio.html">Comercio</a></li>
-          <li><a href="./pages/como-comprar.html">Cómo comprar</a></li>
-          <li><a href="./pages/nuestra-historia.html">Nuestra historia</a></li>
-          <li><a href="./pages/contacto.html">Contacto</a></li>
-        </ul>
+          <a href="#">Inicio</a>
+          <a href="./pages/comercio.html">Comercio</a>
+          <a href="./pages/como-comprar.html">Cómo comprar</a>
+          <a href="./pages/nuestra-historia.html">Nuestra historia</a>
+          <a href="./pages/contacto.html">Contacto</a>
       </nav>
     </header>
     <!--Fin barra de navegación-->
@@ -89,17 +75,17 @@
         <div class="contenedor-categorias">
           <div class="categria1">
             <h3>Bazar</h3>
-            <a href="./pages/tienda.html" class="ver-productos"
+            <a href="./pages/comercio.html" class="ver-productos"
               >Ver productos</a
             >
           </div>
           <div class="categria2">
             <h3>Casa y cocina</h3>
-            <a href="./pages/tienda.html">Ver productos</a>
+            <a href="./pages/comercio.html">Ver productos</a>
           </div>
           <div class="categria3">
             <h3>Accesorios</h3>
-            <a href="./pages/tienda.html">Ver productos</a>
+            <a href="./pages/comercio.html">Ver productos</a>
           </div>
         </div>
       </section>
@@ -116,11 +102,17 @@
               de madera sustentable
             </h4>
             <p class="precio">$500</p>
+            <button class="btn-comprar">
+              <a href="#" class="btn-comprar-a">Comprar</a>
+            </button>
           </article>
           <article class="caja-producto">
             <img src="./images/productos/producto-02" width="300" alt="" />
             <h4 class="titulo-producto">Conjunto babero y medias</h4>
             <p class="precio">$500</p>
+            <button class="btn-comprar">
+              <a href="#" class="btn-comprar-a">Comprar</a>
+            </button>
           </article>
           <article class="caja-producto">
             <img src="./images/productos/producto-03" width="300" alt="" />
@@ -129,6 +121,9 @@
               de helado palito
             </h4>
             <p class="precio">$500</p>
+            <button class="btn-comprar">
+              <a href="#" class="btn-comprar-a">Comprar</a>
+            </button>
           </article>
           <article class="caja-producto">
             <img src="./images/productos/producto-04" width="300" alt="" />
@@ -137,6 +132,9 @@
               del juego del calamar
             </h4>
             <p class="precio">$500</p>
+            <button class="btn-comprar">
+              <a href="#" class="btn-comprar-a">Comprar</a>
+            </button>
           </article>
         </div>
         <button class="btn-productos">
@@ -189,7 +187,7 @@
             <li>
               <a href="mailto:info@argentinaonlineshopping.com.ar"
                 ><img
-                  src="./images/iconos/correo.png"
+                  src="../images/iconos/correo.png"
                   alt="Facebook"
                   class="icons-contacto"
                 />
@@ -199,7 +197,7 @@
             <li>
               <a href="tel:1122747457">
                 <img
-                  src="./images/iconos/telefono.png"
+                  src="../images/iconos/telefono.png"
                   alt="Teléfono"
                   class="icons-contacto"
                 />
@@ -208,7 +206,7 @@
             </li>
             <li>
               <img
-                src="./images/iconos/horario.png"
+                src="../images/iconos/horario.png"
                 alt="Horario"
                 class="icons-contacto"
               />
@@ -221,7 +219,7 @@
           <ul>
             <li><a href="#">Términos y condiciones</a></li>
             <li><a href="#">Política de privacidad</a></li>
-            <li><a href="#">Preguntas frecuentes</li>
+            <li><a href="#">Preguntas frecuentes</a></li>
           </ul>
         </div>
         <div>
@@ -230,7 +228,7 @@
             <li>
               <a href="https://www.facebook.com/" target="_blank"
                 ><img
-                  src="./images/iconos/facebook.png"
+                  src="../images/iconos/facebook.png"
                   alt="Facebook"
                   class="icons-sociales"
               /></a>
@@ -240,7 +238,7 @@
                 href="https://www.instagram.com/argentinaonlineshopping/"
                 target="_blank"
                 ><img
-                  src="./images/iconos/instagram.png"
+                  src="../images/iconos/instagram.png"
                   alt="Instagram"
                   class="icons-sociales"
               /></a>
@@ -248,7 +246,7 @@
             <li>
               <a href="https://web.whatsapp.com/" target="_blank"
                 ><img
-                  src="./images/iconos/whatsapp.png"
+                  src="../images/iconos/whatsapp.png"
                   alt="WhatsApp"
                   class="icons-sociales"
               /></a>
@@ -264,5 +262,8 @@
       </div>
     </footer>
     <!--Fin pie de página-->
+
+    <!--JS Boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>
