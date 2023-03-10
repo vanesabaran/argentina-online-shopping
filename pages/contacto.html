@@ -13,8 +13,13 @@
       href="../images/favicon.png"
       type="image/x-icon"
     />
-     <!--CSS Bootsratp-->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--CSS Bootsratp-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <!--Barra de navegación-->
@@ -22,14 +27,23 @@
       <!--Principal-->
       <div class="menu">
         <div class="box box1">
-          <!--Buscador--> 
-          <input type="text" class="input-buscador" placeholder="Buscar producto..." />
+          <!--Buscador-->
+          <input
+            type="text"
+            class="input-buscador"
+            placeholder="Buscar producto..."
+          />
           <button href="#" class="btn-buscador">Buscar</button>
+          <img class="menuHamburguesa" src="./images/iconos/menu.png" alt="Menú hamburguesa">
         </div>
         <!--Logo-->
         <div class="box box2">
-          <a href="#">
-            <img src="../images/logo.png" class="logo" alt="Logo de Argentina Online Shopping" />
+          <a href="/index.html">
+            <img
+              src="../images/logo.png"
+              class="logo"
+              alt="Logo de Argentina Online Shopping"
+            />
           </a>
         </div>
         <!--Cuenta y carrito-->
@@ -69,76 +83,152 @@
       </section>
       <!--Fin slider-->
 
-      <!--Formulario-->
-      <section id="contenedor-contacto">
-        <!--Datos-->
-        <article>
-          <h1>
-            DÉJANOS TU CONSULTA NOS PONDREMOS EN CONTACTO A LA BREVEDAD.
-          </h1>
-          <br>
-          <h4>Datos de contacto</h4>
-          <ul>
-            <li><a href="mailto:info@argentinaonlineshopping.com.ar">info@argentinaonlineshopping.com.ar</a></li>
-            <li><a href="tel:1122747457">11-2274-7457</a></li>
-            <li>Lunes a viernes de 9 a 18 hs</li>
-          </ul>
-          <h4>Redes sociales</h4>
-          <ul class="sociales">
-            <li>
-              <a href="https://www.facebook.com/" target="_blank"
-                ><img
-                  src="../images/iconos/facebook.png"
-                  alt="Facebook"
-                  class="icons-sociales"
-              /></a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/argentinaonlineshopping/"
-                target="_blank"
-                ><img
-                  src="../images/iconos/instagram.png"
-                  alt="Instagram"
-                  class="icons-sociales"
-              /></a>
-            </li>
-            <li>
-              <a href="https://web.whatsapp.com/" target="_blank"
-                ><img
-                  src="../images/iconos/whatsapp.png"
-                  alt="WhatsApp"
-                  class="icons-sociales"
-              /></a>
-            </li>
-          </ul>
-        </article>
-        <!--Fin datos-->
+      <div class="container contenedor-contacto">
+        <div class="row">
+          <div class="col-md-8">
+            <h4 class="titulo-contacto">
+              Déjanos tu consulta nos pondremos en contacto a la brevedad.
+            </h4>
+            <!--Formulario-->
+            <form>
+              <div class="mb-1 flex-nombre-apellido">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    aria-label="Nombre"
+                    class="form-control"
+                    placeholder="Nombre"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 apellido">
+                  <input
+                    type="text"
+                    aria-label="Apellido"
+                    class="form-control"
+                    placeholder="Apellido"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Correo electrónico"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="Teléfono"
+                  placeholder="Teléfono (opcional)"
+                />
+              </div>
+              <div class="mb-3">
+                <select class="form-select" aria-placeholder="Asunto" required>
+                  <option selected>Asunto</option>
+                  <option value="1">Consulta</option>
+                  <option value="2">Mayoristas</option>
+                  <option value="3">Problema técnico</option>
+                  <option value="4">Devolución</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-select"
+                  name="Mensaje"
+                  cols="1"
+                  rows="7"
+                  placeholder="Déjanos tu mensaje aquí..."
+                ></textarea>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Aceptar la política de privacidad.</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Aceptar los términos y condiciones.</label>
+              </div>
+              <button type="submit" class="btn btn-primary" id="btn-enviar">
+                Enviar
+              </button>
+            </form>
+          </div>
 
-        <!--Formulario-->
-        <article>
-          <form action="#">
-            <input type="text" placeholder="Nombre y apellido" />
-            <br /><br />
-            <input type="email" placeholder="Correo electrónico" />
-            <br /><br />
-            <input type="number" placeholder="Teléfono (opcional)" />
-            <br /><br />
-            <input type="text" placeholder="Asunto" />
-            <br /><br />
-            <textarea
-              name=""
-              id=""
-              cols="60"
-              rows="10"
-              placeholder="Mensaje"
-            ></textarea>
-            <br /><br />
-            <input type="submit" value="Enviar" />
-          </form>
-        </article>
-        <!--Fin formulario-->
-      </section>
+          <!--Fin formulario-->
+
+          <!--Datos-->
+          <div class="col-md-4 contenedor-datos">
+            <h4 class="titulo-contacto center">Datos de contacto</h4>
+            <ul>
+              <li class="sociales-contacto">
+                <a href="mailto:info@argentinaonlineshopping.com.ar" class="sociales-a"
+                  ><img
+                    src="../images/iconos/correo.png"
+                    alt="Facebook"
+                    class="icons-contacto"
+                  />
+                  info@argentinaonlineshopping.com.ar</a
+                >
+              </li>
+              <li class="sociales-contacto">
+                <a href="tel:1122747457" class="sociales-a">
+                  <img
+                    src="../images/iconos/telefono.png"
+                    alt="Teléfono"
+                    class="icons-contacto"
+                  />
+                  11-2274-7457</a
+                >
+              </li>
+              <li class="sociales-contacto">
+                <img
+                  src="../images/iconos/horario.png"
+                  alt="Horario"
+                  class="icons-contacto"
+                />
+                Lunes a viernes de 9 a 18 hs
+              </li>
+            </ul>
+            <h4 class="titulo-contacto center">Redes sociales</h4>
+            <ul class="sociales">
+              <li>
+                <a href="https://www.facebook.com/" target="_blank" class="sociales-a"
+                  ><img
+                    src="../images/iconos/facebook.png"
+                    alt="Facebook"
+                    class="icons-contacto"
+                /> Argentina Online Shopping</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/argentinaonlineshopping/"
+                  target="_blank" class="sociales-a"
+                  ><img
+                    src="../images/iconos/instagram.png"
+                    alt="Instagram"
+                    class="icons-contacto"
+                /> @argentinaonlineshopping</a>
+              </li>
+              <li>
+                <a href="https://web.whatsapp.com/" target="_blank" class="sociales-a"
+                  ><img
+                    src="../images/iconos/whatsapp.png"
+                    alt="WhatsApp"
+                    class="icons-contacto"
+                /> +54 9 11 2274-7457</a>
+              </li>
+            </ul>
+            <!--Fin datos-->
+          </div>
+        </div>
+      </div>
 
       <!--Banner-->
       <section class="banner">

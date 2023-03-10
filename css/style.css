@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 /*Tipografías*/
@@ -63,6 +63,10 @@ nav a:hover {
 	color: #66ABDF;
     text-decoration: underline;
     font-weight: 900;
+}
+
+.menuHamburguesa{
+    display: none;
 }
 
 .input-buscador{
@@ -233,7 +237,7 @@ article img{
     color: #ffffff;
     text-align: center;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 900;
 }
 
@@ -311,6 +315,7 @@ footer div div{
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    flex-direction: row;
 }
 
 footer div div h3{
@@ -366,12 +371,22 @@ footer div div ul li{
     font-size: 14px;
 }
 /*-------------COMERCIO-------------------*/
-section div{
-    display: inline-block;
+.titulo-comercio{
+    text-align: center;
+    color: #66ABDF;
+    padding: 10px 0px 40px 0px;
 }
 
 .lista-categoria{
     color: #000;
+    padding: 0px 20px;
+}
+
+.filtro-lista{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*-------------COMO COMPRAR-------------------*/
 span{
@@ -427,11 +442,223 @@ span{
 }
 
 /*-------------CONTACTO-------------------*/
-form{
-    display: block;
+.contenedor-contacto{
+    padding: 30px 0px 80px 0px;
 }
 
-#contenedor-contacto{
+.titulo-contacto{
+    color: #66ABDF;
+}
+
+.center{
+    text-align: center;
+}
+
+.flex-nombre-apellido{
     display: flex;
-    align-items: center;
+}
+
+.apellido{
+    padding-left: 30px;
+}
+
+.mb-1, .mb-3{
+    margin: 30px 0px;
+}
+
+#btn-enviar{
+    background-color: #66ABDF;
+    color: #fff;
+    padding: 6px 50px;
+    margin: 20px 0px;
+    font-weight: bold;
+}
+
+.sociales-contacto{
+    list-style-type: none;
+    padding: 15px 0px;
+}
+
+div ul li a{
+    text-decoration: none;
+}
+
+.sociales-a{
+    color: #000;
+}
+
+
+/*-------------RESPONSIVE-------------------*/
+/*Tablet*/
+@media screen and (max-width:1024px){
+    .parallax{
+        /* Efecto parallax al scrollear */
+        height: 500px;
+        padding: 50px 30px;
+        margin-bottom: 20px;
+    }
+    
+    .titulo-parallax{
+        text-align: center;
+        font-size: 30px;
+        padding: 220px 20px;
+    }
+    
+    .contenedor-datos{
+        display: none;
+    }
+
+    .banner{
+        display: none;
+    }
+
+    .footer-section{
+        flex-wrap: wrap;
+    }
+
+    .footer-section>div{
+        width: 100%;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div div h3 ul li{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .categria2{
+        margin: 20px 0px;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 768px){
+    .parallax{
+        height: 500px;
+        width: 100%;
+        padding: 50px 30px;
+    }
+    
+    .titulo-parallax{
+        text-align: center;
+        font-size: 30px;
+        padding: 220px 20px;
+    }
+    
+    .contenedor-datos{
+        display: none;
+    }
+
+    .banner{
+        display: none;
+    }
+
+    .footer-section{
+        flex-wrap: wrap;
+    }
+
+    .footer-section>div{
+        width: 100%;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div div ul li{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .posicion{
+        padding-left: 0px;
+    }
+
+    footer div div{
+        display: inline-block;
+        padding: 0px 0px 0px 0px;
+    }
+    
+    .footer-section{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    footer div div h3{
+        padding: 0px;
+    }
+    
+    footer div div ul li{
+        list-style-type: none;
+        color: #000;
+        font-size: 16px;
+        line-height: 1.4em;
+        margin: 10px 0px;
+    }
+    
+    footer div div ul li{
+        text-align: center;
+    }
+    
+    .icons-contacto{
+        width: 35px;
+    }
+    
+    .sociales li{
+        display: inline-block;
+        margin: 20px;
+    }
+    
+    .icons-sociales{
+        width: 40px;
+        text-align: left;
+    }
+
+    .menuHamburguesa{
+        display: block;
+        color: #66ABDF;
+        width: 15%;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .input-buscador{
+        display: none;
+    }
+
+    .btn-buscador{
+        display: none;
+    }
+
+    .titulo-categorias{
+        font-size: 30px;
+        padding: 50px 0px;
+    }
+    
+    .categria2{
+        margin: 20px 0px;
+    }
+
+    .historia, .pasos{
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+
+    .titulo-portada{
+        padding: 200px 0px;
+        font-size: 30px;
+    }
+
+    .btn-productos, .btn-comprar{
+        padding: 5px 20px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
 }
