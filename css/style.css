@@ -14,6 +14,7 @@
 body{
     font-family: 'metropolis' ;
     overflow-x: hidden;
+    min-height: 100%;
 }
 
 /*Estilos globales*/
@@ -38,6 +39,13 @@ header {
 	padding: 10px 0px 20px 0px;
 }
 
+.box-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .box{
     width: 300px;
 }
@@ -49,6 +57,20 @@ header {
 .icons-menu{
     width: 7%;
 	margin: 0px 7px;
+}
+
+.icons-flex{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.usuario{
+    padding-right: 20px;
+}
+
+.a-icons{
+    text-decoration: none;
+    color: #000;
 }
 
 nav a{
@@ -82,11 +104,8 @@ nav a:hover {
     border: #c19403 2px solid;
 }
 
-.btn-buscador{
-    background-color: #000;
-    color: #fff;
-    border-radius: 2px;
-    padding: 10px 20px;
+.fondo-navbar{
+    background-color: #ffffff;
 }
 
 .box1{
@@ -309,6 +328,7 @@ footer div div{
 
 #footer{
     text-align: center;
+    background-color: #191919;
 }
 
 .footer-section{
@@ -326,7 +346,7 @@ footer div div h3{
 
 footer div div ul li{
     list-style-type: none;
-    color: #000;
+    color: #ffffff;
 	font-size: 1.2rem;
 	line-height: 1.4em;
     margin: 10px 80px;
@@ -334,11 +354,15 @@ footer div div ul li{
 
 footer div div ul li a{
     text-decoration: none;
-    color: #000;
+    color: #ffffff;
 }
 
 footer div div ul li{
     text-align: left;
+}
+
+footer div div ul li p{
+   color: #ffffff;
 }
 
 .datos-contacto{
@@ -353,7 +377,13 @@ footer div div ul li{
 }
 
 .icons-contacto{
-    width: 35px;
+    color: #66ABDF;
+    padding-right: 10px;
+}
+
+.icons-datos{
+    width: 12%;
+    padding-right: 10px;
 }
 
 .sociales li{
@@ -369,24 +399,51 @@ footer div div ul li{
     text-align: center;
     padding: 20px 0px;
     font-size: 14px;
+    color: #ffffff;
 }
 /*-------------COMERCIO-------------------*/
-.titulo-comercio{
+.grid-container > * {
     text-align: center;
-    color: #66ABDF;
-    padding: 10px 0px 40px 0px;
+  }
+
+.grid-container {
+    display: grid;
+    grid-template:
+    "sidebar  main   main" auto /
+    200px    auto   200px;
+}
+  
+.sidebar {
+    grid-area: sidebar;
+    padding: 10px;
 }
 
+.sidebar1, .sidebar2, .sidebar3{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5em;
+    padding-left: 20px;
+}
+
+.titulo-sidebar{
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 20px;
+    color: #66ABDF;
+    font-weight: 900;
+}
+  
+.lista-categorias{
+    text-align: left;
+    list-style-type: none;
+    font-style: normal;
+}
+  
 .lista-categoria{
     color: #000;
-    padding: 0px 20px;
-}
-
-.filtro-lista{
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-style: normal;
 }
 /*-------------COMO COMPRAR-------------------*/
 span{
@@ -409,7 +466,7 @@ span{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-	height: 400px;
+	height: 500px;
 	padding: 50px 30px;
 	margin-bottom: 50px;
 }
@@ -420,7 +477,7 @@ span{
     font-size: 45px;
     line-height: 1.4em;
     font-weight: 900;
-    padding-top: 220px;
+    padding-top: 290px;
 }
 
 #nosotros{
@@ -491,17 +548,35 @@ div ul li a{
 /*-------------RESPONSIVE-------------------*/
 /*Tablet*/
 @media screen and (max-width:1024px){
+    .grid-container {
+        grid-template:
+          "main"    auto
+          "sidebar" auto
+    }
+
+    .logo{
+        padding: 30px 0;
+    }
+    
+    .menu{
+        flex-direction: column;
+    }
+
+    .icons-flex{
+        justify-content: center;
+    }
+      
     .parallax{
         /* Efecto parallax al scrollear */
         height: 500px;
-        padding: 50px 30px;
+        padding: 80px 30px;
         margin-bottom: 20px;
     }
     
     .titulo-parallax{
         text-align: center;
         font-size: 30px;
-        padding: 220px 20px;
+        padding: 260px 20px;
     }
     
     .contenedor-datos{
@@ -536,6 +611,19 @@ div ul li a{
 
 /*Mobile*/
 @media screen and (max-width: 768px){
+    .grid-container {
+        grid-template:
+          "header  header" 100px
+          "navbar  navbar" 50px
+          "sidebar main"   auto
+          "footer  footer" 100px /
+          200px    auto;
+    }
+
+    .icons-flex{
+        justify-content: center;
+    }
+    
     .parallax{
         height: 500px;
         width: 100%;
@@ -554,6 +642,15 @@ div ul li a{
 
     .banner{
         display: none;
+    }
+
+    .portada{
+        height: auto;
+    }
+
+    .titulo-portada{
+        padding-top: 580px;
+        color: #fff;
     }
 
     .footer-section{

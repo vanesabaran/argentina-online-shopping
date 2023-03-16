@@ -20,57 +20,65 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <!--Icons Font-Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   </head>
   <body>
     <!--Barra de navegación-->
-    <header class="cabecera">
+    <header>
       <!--Principal-->
-      <div class="menu">
-        <div class="box box1">
-          <!--Buscador-->
-          <input
-            type="text"
-            class="input-buscador"
-            placeholder="Buscar producto..."
-          />
-          <button href="#" class="btn-buscador">Buscar</button>
-          <img class="menuHamburguesa" src="./images/iconos/menu.png" alt="Menú hamburguesa">
-        </div>
-        <!--Logo-->
-        <div class="box box2">
-          <a href="/index.html">
-            <img
-              src="../images/logo.png"
-              class="logo"
-              alt="Logo de Argentina Online Shopping"
-            />
-          </a>
-        </div>
-        <!--Cuenta y carrito-->
-        <div class="box box3">
-          <a href="#">
-            <img
-              src="../images/iconos/usuario.png"
-              class="icons-menu"
-              alt="Crear o iniciar la cuenta"
-            />
-          </a>
-          <a href="#">
-            <img
-              src="../images/iconos/carrito.png"
-              class="icons-menu"
-              alt="Carrito"
-            />
-          </a>
+      <div class="container-fluid">
+        <div class="row menu">
+            <div class="col-md-4 icons-flex">
+              <div class="usuario">
+                <a href="#" class="a-icons"><i class="fa-solid fa-user user-margen"></i> Mi cuenta</a>
+              </div>
+              <div class="carrito">
+                <a href="#" class="a-icons"><i class="fa-solid fa-cart-shopping"></i> Mi carrito</a>
+              </div>
+            </div>
+            <div class="col-md-4 logo">
+              <a href="../index.html"><img src="../images/logo.png" width="32%" alt="Logo de Argentina Online Shopping"></a>
+            </div>
+            <div class="col-md-4">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search">
+                <!-- <button class="btn btn-outline-success" type="submit">Buscar</button> -->
+                <a href="#" class="a-icons">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+              </form>
+            </div>
         </div>
       </div>
       <!--Menú principal-->
-      <nav>
-        <a href="../index.html">Inicio</a>
-        <a href="./comercio.html">Comercio</a>
-        <a href="./como-comprar.html">Cómo comprar</a>
-        <a href="./nuestra-historia.html">Nuestra historia</a>
-        <a href="#">Contacto</a>
+      <nav class="navbar navbar-expand-lg bg-light fondo-navbar">
+        <div class="container-fluid justify-content-center">
+          <!--Menú hamburguesa-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--Menú-->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./comercio.html">Comercio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./como-comprar.html">Cómo comprar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./nuestra-historia.html">Nuestra historia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <!--Fin barra de navegación-->
@@ -172,7 +180,7 @@
                   ><img
                     src="../images/iconos/correo.png"
                     alt="Facebook"
-                    class="icons-contacto"
+                    class="icons-datos"
                   />
                   info@argentinaonlineshopping.com.ar</a
                 >
@@ -182,7 +190,7 @@
                   <img
                     src="../images/iconos/telefono.png"
                     alt="Teléfono"
-                    class="icons-contacto"
+                    class="icons-datos"
                   />
                   11-2274-7457</a
                 >
@@ -191,7 +199,7 @@
                 <img
                   src="../images/iconos/horario.png"
                   alt="Horario"
-                  class="icons-contacto"
+                  class="icons-datos"
                 />
                 Lunes a viernes de 9 a 18 hs
               </li>
@@ -256,7 +264,7 @@
     <!--Fin contenido principal-->
 
     <!--Pie de página-->
-    <footer id="footer">
+    <footer id="footer" class="footer">
       <div class="footer-section">
         <div>
           <h3>Recursos</h3>
@@ -264,8 +272,8 @@
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="./comercio.html">Comercio</a></li>
             <li><a href="./como-comprar.html">Cómo comprar</a></li>
-            <li><a href="./nuestra-historia.html">Nuestra historia</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Nuestra historia</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
           </ul>
         </div>
         <div>
@@ -273,31 +281,35 @@
           <ul>
             <li>
               <a href="mailto:info@argentinaonlineshopping.com.ar"
-                ><img
+                >
+                <!-- <img
                   src="../images/iconos/correo.png"
                   alt="Facebook"
                   class="icons-contacto"
-                />
+                /> -->
+                <i class="fa-solid fa-envelope icons-contacto"></i> 
                 info@argentinaonlineshopping.com.ar</a
               >
             </li>
             <li>
               <a href="tel:1122747457">
-                <img
+                <!-- <img
                   src="../images/iconos/telefono.png"
                   alt="Teléfono"
                   class="icons-contacto"
-                />
+                /> -->
+                <i class="fa-solid fa-phone icons-contacto"></i> 
                 11-2274-7457</a
               >
             </li>
             <li>
-              <img
+              <!-- <img
                 src="../images/iconos/horario.png"
                 alt="Horario"
                 class="icons-contacto"
-              />
-              Lunes a viernes de 9 a 18 hs
+              /> -->
+              <p><i class="fa-solid fa-clock icons-contacto"></i>
+              Lunes a viernes de 9 a 18 hs</p>
             </li>
           </ul>
         </div>
