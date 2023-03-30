@@ -1,0 +1,63 @@
+.titulo-categorias {
+	text-align: center;
+	color: $color_5;
+	font-size: 30px;
+	padding: 50px 0px;
+
+	@media screen and (max-width: $mediaMobile-768) {
+		font-size: 30px;
+		padding: 50px 0px;
+	}
+}
+section {
+	div {
+		display: inline-block;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+		h3 {
+			color: $color_6;
+			text-align: center;
+			font-size: 40px;
+			padding: 200px 0px 20px 0px;
+			overflow: hidden;
+		}
+		a {
+			color: $color_6;
+			font-size: 20px;
+			padding-top: 100px;
+			text-align: center;
+			font-weight: 700;
+		}
+	}
+}
+.categria1 {
+	background-image: url('../images/productos/categoria-bazar.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 500px;
+	height: 500px;
+}
+.categria2 {
+	background-image: url('../images/productos/categoria-casa.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 500px;
+	height: 500px;
+	margin: 0px 80px;
+
+	@media screen and (max-width:$mediaTablet-1024) {
+		margin: 20px 0px;
+	}
+
+	@media screen and (max-width: $mediaMobile-768) {
+		margin: 20px 0px;
+	}
+}
+.categria3 {
+	background-image: url('../images/productos/categoria-accesorios.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 500px;
+	height: 500px;
+}

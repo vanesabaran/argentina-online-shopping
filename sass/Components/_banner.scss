@@ -1,0 +1,59 @@
+.banner {
+	background-image: url('../images/fondo-suscripcion.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0%;
+	width: 100%;
+	height: 500px;
+
+	@media screen and (max-width:$mediaTablet-1024) {
+		display: none;
+	}
+
+	@media screen and (max-width: $mediaMobile-768) {
+		display: none;
+	}
+}
+.titulo-banner {
+	color: $color_1;
+	font-size: 50px;
+	line-height: 1.7em;
+	padding: 140px 90px 20px 650px;
+	text-align: left;
+}
+.descripcion-banner {
+	color: $color_1;
+	font-size: 20px;
+	line-height: 1.4em;
+	padding: 0px 120px 40px 650px;
+	text-align: left;
+}
+.form-banner {
+	text-align: left;
+	padding-left: 647px;
+}
+.input-banner {
+	background-color: $background-color_2;
+	border: rgb(229, 219, 219) 1px solid;
+	border-radius: 2px;
+	padding: 18px 10px;
+	padding-right: 250px;
+	text-align: left;
+	&:hover {
+		border: #c19403 2px solid;
+	}
+}
+.btn-banner {
+	background-color: $background-color_4;
+	color: $color_7;
+	padding: 13px 40px;
+	border-radius: 2px;
+	text-align: center;
+	font-size: 20px;
+}
+a {
+	button {
+		text-decoration: none;
+		cursor: pointer;
+	}
+}

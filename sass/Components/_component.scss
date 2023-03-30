@@ -1,0 +1,45 @@
+.parallax {
+	background-image: url('../images/sliders/slider-01.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1000px;
+	padding: 50px 30px;
+	margin-bottom: 50px;
+
+	@media screen and (max-width:$mediaTablet-1024) {
+		height: 500px;
+		padding: 80px 30px;
+		margin-bottom: 20px;
+	}
+
+	@media screen and (max-width: $mediaMobile-768) {
+		height: 500px;
+		width: 100%;
+		padding: 50px 30px;
+	}
+}
+.titulo-parallax {
+	text-align: left;
+	color: $color_1;
+	font-size: 40px;
+	padding: 450px 100px;
+	line-height: 1.5em;
+	font-weight: 900;
+	overflow: hidden;
+
+
+@media screen and (max-width:$mediaTablet-1024) {
+	text-align: center;
+	font-size: 30px;
+	padding: 260px 20px;
+	}
+
+	@media screen and (max-width: $mediaMobile-768) {
+		text-align: center;
+		font-size: 30px;
+		padding: 220px 20px;
+	}
+}
+

@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  },
+  "name": "argentina-online-shopping",
+  "version": "1.0.0",
+  "description": "Migrando css a sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass sass/main.scss css/main.css --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
